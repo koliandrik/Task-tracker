@@ -26,5 +26,6 @@ WHEN I click the delete button for a task
 THEN the task is removed from the task board and will not be added back after refreshing
 WHEN I refresh the page
 THEN the saved tasks persist
+```
 
-![alt text](assets/img/koliandrik.github.io_Task-tracker_.png)
+![alt text](assets/img/koliandrik.github.io_Task-tracker_(1).png)
