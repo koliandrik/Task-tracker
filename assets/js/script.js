@@ -72,12 +72,15 @@ function renderTaskList() {
     const tasks = readTasksFromStorage();
 
     const todoList = $('#todo-cards');
-    todoList.empty();
+
 
     const inProgressList = $('#in-progress-cards');
-    inProgressList.empty();
+
 
     const doneList = $('#done-cards');
+
+    todoList.empty();
+    inProgressList.empty();
     doneList.empty();
 
     for (let task of tasks) {
@@ -154,13 +157,19 @@ function handleDrop(event, ui) {
 
     const newStatus = event.target.id;
 
+    const tasks = readTasksFromStorage();
+
+    console.log(taskId);
+
+    console.log(newStatus);
+
     for (let task of tasks) {
-        if (task.id === taskId) {
+        if (task.id == taskId) {
         task.status = newStatus;
         }
     }
 
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    saveTasksToStorage(tasks);
     renderTaskList();
 }
 
@@ -178,6 +187,6 @@ $(document).ready(function () {
 
     $('.lane').droppable({
         accept: '.draggable',
-        drop: handleDrop,
+        drop: handleDrop
     });
 });
