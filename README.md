@@ -28,4 +28,4 @@ WHEN I refresh the page
 THEN the saved tasks persist
 ```
 
-![alt text](assets/img/koliandrik.github.io_Task-tracker_(1).png)
+![alt text](<assets/img/koliandrik.github.io_Task-tracker_ (1).png>)
